@@ -1,5 +1,4 @@
 
-
 #include <arrayfire.h>
 #include <cstdio>
 #include <cstdlib>
@@ -15,6 +14,8 @@ int main(int argc, char *argv[])
         int device = argc > 1 ? atoi(argv[1]) : 0;
         af::setDevice(device);
         af::info();
+
+		// inserted this here
 
         printf("Create a 5-by-3 matrix of random floats on the GPU\n");
         array A = randu(5,3, f32);
